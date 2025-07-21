@@ -72,12 +72,22 @@ A grande vantagem deste projeto é sua flexibilidade. Todas as customizações s
     * Coloque seu documento Word modelo na pasta `modelo/`.
     * *Você pode usar os arquivos da pasta `exemplos/` como referência.*
 
+/ (pasta raiz do seu projeto)
+|
+|-- dados/
+|   └── modelo_banco_de_dados.xlsx  <-- COLOQUE SUA PLANILHA AQUI
+|
+|-- modelo/
+|   └── modelo_doc.docx             <-- COLOQUE SEU MODELO WORD AQUI
+|
+|-- src/
+|   └── motor_gerador_documentos.py                (o script que você executa)
+|
+|-- motor_gerador_documentos.exe                   (executável gerado após ajustar as configurações no "Painel de Controle" ['pyinstaller --onefile motor_gerador_documentos.py'])
+
 5.  **Ajuste as Configurações:** Abra o arquivo `src/motor_gerador.py` e ajuste as variáveis no "Painel de Controle" para corresponder aos seus arquivos e necessidades.
 
 6.  **Execute o programa a partir da pasta raiz do projeto:**
-    ```bash
-    python src/motor_gerador_documentos.py
-    ```
 
 7.  Siga as instruções no terminal. **Se você selecionar mais de um item, o programa perguntará se deseja usar o modo de preenchimento 'Individual' ou 'Em Grupo'**, otimizando seu tempo. Os documentos gerados aparecerão na pasta de saída que você configurou.
 
