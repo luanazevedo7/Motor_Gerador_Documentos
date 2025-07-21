@@ -205,3 +205,31 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Ambientes Virtuais
+.venv/
+.venv1/
+venv/
+env/
+
+# Pastas de cache e build do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Pastas de build do PyInstaller
+build/
+dist/
+*.spec
+
+# Pasta de saída gerada pelo usuário
+/termos_gerados/
+
+# Arquivos de configuração de IDEs
+.vscode/
+.idea/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
