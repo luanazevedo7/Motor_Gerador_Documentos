@@ -72,7 +72,7 @@ def motor_gerador():
 
         print("\n--- Lista de Itens Disponíveis ---")
         for index, row in df_dados.iterrows():
-            print(f"{index}: {row[COLUNA_IDENTIFICADORA]}")
+            print(f"{index +1}: {row[COLUNA_IDENTIFICADORA]}")
     except KeyError as e:
         print(f"\n[ERRO] A coluna identificadora '{e}' não foi encontrada na planilha.")
         input("\nPressione Enter para sair.")
@@ -81,7 +81,7 @@ def motor_gerador():
     print("\n--- Seleção de Itens ---")
     input_usuario = input("Digite os números dos itens, separados por vírgula: ")
     try:
-        indices_selecionados = [int(i.strip()) for i in input_usuario.split(',')]
+        indices_selecionados = [int(i.strip()) -1 for i in input_usuario.split(',')]
     except ValueError:
         print("\n[ERRO] Seleção inválida. Por favor, digite apenas números.")
         input("\nPressione Enter para sair.")
